@@ -1,0 +1,26 @@
+.input-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .input-row_label {
+    border: 0.5px solid #d9d9d9;
+    border-radius: 3px 0px 0px 3px;
+    background-color: #fafafa;
+    padding: 4px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-row_input {
+    width: 90%;
+    height: 20px;
+    padding: 7px 12px 7px 12px;
+    border: 0.5px solid #d9d9d9;
+    border-radius: 0px 3px 3px 0px;
+    float: right;
+    font-family: Montserrat;
+    font-size: 14px;
+  }
+}

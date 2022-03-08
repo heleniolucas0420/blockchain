@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { connect } from 'react-redux';
+
+import Block from './components/block/block.component';
+import AddBlock from './components/add-block/add-block.component';
+
 import './App.css';
 
-function App() {
+const App = ({blocks }) => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>BLOCKCHAIN</h1>
+      {
+        blocks.map(block => (
+          <Block key={block.index} {...block} />
+        ))
+      }
+      <AddBlock/>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  blocks: state.blocks
+});
+
+export default connect(mapStateToProps)(App);

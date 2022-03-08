@@ -1,0 +1,51 @@
+.add-block-container {
+  width: 310px;
+  height: fit-content;
+  box-shadow: 0 1px 3px 0 #a8a8a8;
+  border-radius: 10px;
+  text-align: center;
+  margin: 40px auto;
+  padding: 42px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .add-block_button {
+    margin-top: 40px;
+    background: linear-gradient(45deg,#d4145a,#fbb03b);
+    border: none;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 25px;
+    align-self: center;
+    border-radius: 6.25em;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+
+    &:hover {
+      animation: none;
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      // transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+    
+    70% {
+      // transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+    
+    100% {
+      // transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+  }
+}
