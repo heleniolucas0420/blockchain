@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Block from './components/block/block.component';
 import AddBlock from './components/add-block/add-block.component';
+import PageFooter from './components/page-footer/page-footer.component';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ const App = ({blocks }) => {
         ))
       }
       <AddBlock/>
+      <PageFooter name='Mr. President' />
     </div>
   );
 }
